@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+    <style>
+        .container {
+    background-color: rgba(255, 255, 224, 0.871);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    margin-top: 50px;
+    width: 500px;
+    
+}
+.jumbotron{
+    color: rgb(13, 6, 220);
+}
+    </style>
+<div class="container">
+    <div class="jumbotron">
+        <h1>Login Here</h1>
+    </div>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="username">Username :</label><br><input type="text" name="username" placeholder="enter username" class="form-control"><br>
+        <label for="password">Password :</label><br><input type="text" name="password" placeholder="Enter password" class="form-control"> <br>
+        <input type="submit" class="btn btn-success" value="Login">
+    </form>
+</div>
+    
+{% endblock %}
